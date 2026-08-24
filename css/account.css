@@ -342,3 +342,59 @@
     gap: 18px;
   }
 }
+
+/* Large desktop monitors */
+@media (min-width: 1600px) {
+  .account-card {
+    max-width: 520px;
+    padding: 44px;
+  }
+
+  .account-title {
+    font-size: 1.7rem;
+  }
+
+  .account-tab {
+    font-size: 15px;
+  }
+
+  .membership-hero {
+    max-width: 900px;
+  }
+
+  .membership-subtitle {
+    font-size: 17px;
+  }
+
+  .membership-card-title {
+    font-size: 1.3rem;
+  }
+
+  .dashboard-hero {
+    max-width: 1400px;
+  }
+
+  .dashboard-title {
+    font-size: 2rem;
+  }
+
+  .dashboard-email {
+    font-size: 15px;
+  }
+
+  .info-label {
+    font-size: 12px;
+  }
+
+  .info-value {
+    font-size: 16px;
+  }
+
+  .dashboard-routine-card h3 {
+    font-size: 18px;
+  }
+
+  .dashboard-routine-card p {
+    font-size: 15px;
+  }
+}
