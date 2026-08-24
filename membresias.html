@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Empire Performance — Membresías</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/account.css?v=2">
+</head>
+<body>
+
+  <canvas id="stars"></canvas>
+  <div class="nebula-glow glow-1"></div>
+  <div class="nebula-glow glow-2"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo warp-link">
+      <span class="logo-main">VERTICAL EMPIRE</span>
+      <span class="logo-sub">PERFORMANCE</span>
+    </a>
+    <nav class="nav">
+      <button type="button" class="nav-account" id="logoutBtn" aria-label="Cerrar sesión">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <path d="M16 17l5-5-5-5"></path>
+          <path d="M21 12H9"></path>
+        </svg>
+      </button>
+    </nav>
+  </header>
+  <div class="header-spacer"></div>
+
+  <main class="membership-main">
+    <section class="membership-hero">
+      <p class="membership-eyebrow reveal">TU CUENTA</p>
+      <h1 class="membership-title reveal" id="welcomeTitle">Elige tu membresía.</h1>
+      <p class="membership-subtitle reveal">Selecciona el plan que mejor se adapta a tu momento y empieza a entrenar tu máximo salto vertical.</p>
+    </section>
+
+    <section id="precios" class="pricing">
+      <div class="pricing-grid">
+        <div class="pricing-card featured reveal" style="transition-delay: 0s">
+          <h3 class="pricing-name">Vertical Empire Basic</h3>
+          <p class="pricing-desc">La metodología Vertical Empire para desarrollar tu máximo salto vertical.</p>
+          <a href="plataforma.html" class="btn-primary pricing-btn warp-link">Entrar ahora</a>
+        </div>
+
+        <div class="pricing-card featured reveal" style="transition-delay: 0.12s">
+          <h3 class="pricing-name">Vertical Empire Coaching</h3>
+          <p class="pricing-desc">Guía más cercana, con mayor interacción y apoyo para resolver problemas específicos.</p>
+          <a href="plataforma.html" class="btn-primary pricing-btn warp-link">Entrar ahora</a>
+        </div>
+
+        <div class="pricing-card featured reveal" style="transition-delay: 0.24s">
+          <h3 class="pricing-name">Vertical Empire Full</h3>
+          <p class="pricing-desc">La experiencia completa: máximo acompañamiento, contacto directo con tu coach y resultados más rápidos.</p>
+          <a href="plataforma.html" class="btn-primary pricing-btn warp-link">Entrar ahora</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/stars.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/membership.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/warp.js"></script>
+</body>
+</html>

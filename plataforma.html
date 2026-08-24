@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Empire Performance — Plataforma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/account.css?v=2">
+</head>
+<body>
+
+  <canvas id="stars"></canvas>
+  <div class="nebula-glow glow-1"></div>
+  <div class="nebula-glow glow-2"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo warp-link">
+      <span class="logo-main">VERTICAL EMPIRE</span>
+      <span class="logo-sub">PERFORMANCE</span>
+    </a>
+    <a href="index.html" class="header-back-link warp-link">Volver al inicio</a>
+    <nav class="nav">
+      <button type="button" class="nav-account" id="logoutBtn" aria-label="Cerrar sesión">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <path d="M16 17l5-5-5-5"></path>
+          <path d="M21 12H9"></path>
+        </svg>
+      </button>
+    </nav>
+  </header>
+  <div class="header-spacer"></div>
+
+  <main class="dashboard-main">
+    <section class="dashboard-hero">
+      <p class="dashboard-eyebrow reveal">TU PLATAFORMA</p>
+      <h1 class="dashboard-title reveal" id="dashboardTitle">Bienvenido.</h1>
+      <p class="dashboard-email reveal" id="dashboardEmail"></p>
+
+      <div class="dashboard-info-card reveal">
+        <div class="info-item">
+          <span class="info-label">NOMBRE</span>
+          <span class="info-value" id="infoName">—</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">CORREO</span>
+          <span class="info-value" id="infoEmail">—</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">FECHA DE NACIMIENTO</span>
+          <span class="info-value" id="infoBirthdate">—</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">PAÍS</span>
+          <span class="info-value" id="infoCountry">—</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">TELÉFONO</span>
+          <span class="info-value" id="infoPhone">—</span>
+        </div>
+      </div>
+
+      <div class="dashboard-routine-card reveal">
+        <h3>Rutina asignada por el coach</h3>
+        <p>Espacio reservado para la rutina semanal que tu coach te asigne.</p>
+      </div>
+    </section>
+
+    <section id="modulos" class="programs">
+      <p class="programs-eyebrow reveal">TUS MÓDULOS</p>
+      <h2 class="programs-title reveal">Contenido de entrenamiento.</h2>
+
+      <div class="programs-grid">
+        <div class="program-card reveal" style="transition-delay: 0s">
+          <div class="program-image">
+            <img src="img/0a100Salto.png" alt="De 0 a 100 en Salto Vertical" class="program-photo">
+          </div>
+          <h3 class="program-title">De 0 a 100 en Salto Vertical</h3>
+          <p class="program-desc">Descripción breve del programa.</p>
+        </div>
+
+        <div class="program-card reveal" style="transition-delay: 0.08s">
+          <div class="program-image">
+            <img src="img/DolorDeRodillas.png" alt="Fuera Dolor de Rodillas y Tendinitis" class="program-photo photo-knee">
+          </div>
+          <h3 class="program-title">Fuera Dolor de Rodillas y Tendinitis</h3>
+          <p class="program-desc">Descripción breve del programa.</p>
+        </div>
+
+        <div class="program-card reveal" style="transition-delay: 0.16s">
+          <div class="program-image">
+            <img src="img/EstiramientoRecuperacion.png" alt="Estiramientos y Recuperación" class="program-photo photo-stretch">
+          </div>
+          <h3 class="program-title">Estiramientos y Recuperación</h3>
+          <p class="program-desc">Descripción breve del programa.</p>
+        </div>
+
+        <div class="program-card reveal" style="transition-delay: 0.24s">
+          <div class="program-image">
+            <img src="img/BiologiaAlimentacion.png" alt="Biología y Alimentación" class="program-photo photo-nutrition">
+          </div>
+          <h3 class="program-title">Biología y Alimentación</h3>
+          <p class="program-desc">Descripción breve del programa.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/stars.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/warp.js"></script>
+</body>
+</html>

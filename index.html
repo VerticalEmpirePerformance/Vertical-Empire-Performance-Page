@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Empire Performance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=5">
+</head>
+<body>
+
+  <canvas id="stars"></canvas>
+  <div class="nebula-glow glow-1"></div>
+  <div class="nebula-glow glow-2"></div>
+
+  <header class="site-header">
+    <div class="logo">
+      <span class="logo-main">VERTICAL EMPIRE</span>
+      <span class="logo-sub">PERFORMANCE</span>
+    </div>
+    <nav class="nav">
+      <div class="nav-account-wrap">
+        <a href="cuenta.html" class="nav-account warp-link" id="navAccountLink" aria-label="Cuenta">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path>
+          </svg>
+        </a>
+        <div class="nav-account-menu" id="navAccountMenu">
+          <a href="plataforma.html" class="nav-account-menu-item warp-link">Cursos</a>
+          <button type="button" class="nav-account-menu-item" id="navLogoutBtn">Cerrar sesión</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="header-spacer"></div>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <p class="hero-eyebrow">ENTRENAMIENTO DE SALTO VERTICAL</p>
+        <h1 class="hero-title">
+          Desarrolla tu
+          <br>
+          <span class="highlight">máximo potencial</span>
+          <br>
+          Entiende el
+          <br>
+          porqué.
+        </h1>
+        <p class="hero-subtitle">
+          Alcanza tu máximo salto vertical con entrenamiento personalizado, prevención de lesiones y estrategias de nutrición y recuperación.
+        </p>
+        <div class="hero-actions">
+          <button class="btn-primary">Evaluación gratuita</button>
+          <a href="#conocenos" class="btn-secondary">Conoce Más</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="particles">
+          <span class="particle p1"></span>
+          <span class="particle p2"></span>
+          <span class="particle p3"></span>
+          <span class="particle p4"></span>
+          <span class="particle p5"></span>
+          <span class="particle p6"></span>
+          <span class="particle p7"></span>
+          <span class="particle p8"></span>
+        </div>
+        <img src="img/PersonaSaltando.png" alt="Atleta saltando" class="hero-jumper">
+      </div>
+    </section>
+
+    <section id="conocenos" class="about">
+      <p class="about-eyebrow reveal">CONÓCENOS</p>
+      <h2 class="about-title reveal">
+        Mira de qué se trata
+        <br>
+        Vertical Empire.
+      </h2>
+
+      <div class="video-placeholder reveal">
+        <button class="play-btn" aria-label="Reproducir video">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="white">
+            <path d="M8 5v14l11-7z"></path>
+          </svg>
+        </button>
+        <p class="video-placeholder-text">Espacio reservado para tu video</p>
+      </div>
+    </section>
+
+    <section id="filosofia" class="philosophy">
+      <p class="philosophy-eyebrow reveal">NUESTRA FILOSOFÍA</p>
+
+      <div class="philosophy-row">
+        <div class="philosophy-left reveal-left">
+          <h2 class="philosophy-title">
+            No solo entrenamos
+            <br>
+            tu cuerpo.
+            <br>
+            <span class="highlight">Entrenamos tu</span>
+            <br>
+            <span class="highlight">criterio.</span>
+          </h2>
+        </div>
+
+        <div class="philosophy-right reveal-right">
+          <p class="philosophy-text-primary">
+            No solo te ayudamos a mejorar, te enseñamos a entender tu entrenamiento, identificar estancamientos y tomar mejores decisiones para seguir progresando a largo plazo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso" class="process">
+      <div class="process-timeline">
+        <div class="process-step reveal">
+          <div class="step-marker"><span>01</span></div>
+          <div class="step-card">
+            <div class="step-header">
+              <h3>Evaluación del atleta</h3>
+              <span class="step-badge">GRATIS</span>
+            </div>
+            <p class="step-desc">Recopilamos datos físicos, experiencia deportiva, objetivos, historial de entrenamiento, lesiones o molestias actuales, capacidad de entrenamiento disponible, videos de salto y movimiento, y hábitos de recuperación y nutrición.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-marker"><span>02</span></div>
+          <div class="step-card">
+            <div class="step-header">
+              <h3>Diagnóstico</h3>
+            </div>
+            <p class="step-desc">Analizamos la información recopilada para identificar qué está frenando tu progreso, por qué te encuentras estancado, qué capacidades necesitas desarrollar y qué factores aumentan el riesgo de lesión.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-marker"><span>03</span></div>
+          <div class="step-card">
+            <div class="step-header">
+              <h3>Plan personalizado</h3>
+            </div>
+            <p class="step-desc">Diseñamos una estrategia específica: entrenamiento de fuerza, pliometría, trabajo de potencia, técnica de salto, movilidad y estiramientos, nutrición, suplementación y estrategias de recuperación.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-marker"><span>04</span></div>
+          <div class="step-card">
+            <div class="step-header">
+              <h3>Desarrollo y seguimiento</h3>
+            </div>
+            <p class="step-desc">Aplicas el plan mientras recibes acompañamiento: resolvemos dudas, revisamos ejecución de ejercicios, analizamos videos y ajustamos según tu respuesta al entrenamiento.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-marker"><span>05</span></div>
+          <div class="step-card">
+            <div class="step-header">
+              <h3>Evaluación de resultados</h3>
+            </div>
+            <p class="step-desc">Analizamos cambios en el salto vertical, mejoras en fuerza y potencia, estado de molestias o lesiones, adaptación al entrenamiento y cumplimiento de objetivos.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-marker"><span>06</span></div>
+          <div class="step-card">
+            <div class="step-header">
+              <h3>Optimización continua</h3>
+            </div>
+            <p class="step-desc">El desarrollo deportivo es un proceso constante. Con los resultados obtenidos mantenemos la estrategia, aumentamos la dificultad, cambiamos prioridades o corregimos nuevas limitaciones.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="precios" class="pricing">
+      <h2 class="pricing-title reveal">
+        Elige tu nivel de
+        <br>
+        acompañamiento.
+      </h2>
+
+      <div class="pricing-grid">
+        <div class="pricing-card reveal" style="transition-delay: 0s">
+          <h3 class="pricing-name">Vertical Empire Basic</h3>
+          <p class="pricing-desc">La metodología Vertical Empire para desarrollar tu máximo salto vertical.</p>
+          <div class="pricing-price">
+            <span class="price-currency">$</span><span class="price-amount">19</span><span class="price-period">/mes USD</span>
+          </div>
+          <ul class="pricing-features">
+            <li class="feature-yes"><span class="icon">✓</span>Evaluación inicial Vertical Empire</li>
+            <li class="feature-yes"><span class="icon">✓</span>Plan de entrenamiento personalizado</li>
+            <li class="feature-yes"><span class="icon">✓</span>Acceso a la plataforma Vertical Empire</li>
+            <li class="feature-yes"><span class="icon">✓</span>Biblioteca de ejercicios educativa</li>
+            <li class="feature-yes"><span class="icon">✓</span>Educación sobre entrenamiento</li>
+            <li class="feature-yes"><span class="icon">✓</span>Acceso a comunidad privada</li>
+            <li class="feature-yes"><span class="icon">✓</span>Seguimiento semanal de progreso</li>
+            <li class="feature-no"><span class="icon">✕</span>Feedback personalizado del coach en 24 horas</li>
+            <li class="feature-no"><span class="icon">✕</span>Revisión de videos técnicos</li>
+            <li class="feature-no"><span class="icon">✕</span>Llamada semanal con el entrenador</li>
+          </ul>
+          <a href="plataforma.html" class="btn-secondary pricing-btn warp-link">Empezar con Basic</a>
+        </div>
+
+        <div class="pricing-card featured reveal" style="transition-delay: 0.12s">
+          <span class="pricing-badge">Más Popular</span>
+          <h3 class="pricing-name">Vertical Empire Coaching</h3>
+          <p class="pricing-desc">Guía más cercana, con mayor interacción y apoyo para resolver problemas específicos.</p>
+          <div class="pricing-price">
+            <span class="price-currency">$</span><span class="price-amount">45</span><span class="price-period">/mes USD</span>
+          </div>
+          <ul class="pricing-features">
+            <li class="feature-yes"><span class="icon">✓</span>Evaluación inicial Vertical Empire</li>
+            <li class="feature-yes"><span class="icon">✓</span>Plan de entrenamiento personalizado</li>
+            <li class="feature-yes"><span class="icon">✓</span>Acceso a la plataforma Vertical Empire</li>
+            <li class="feature-yes"><span class="icon">✓</span>Biblioteca de ejercicios educativa</li>
+            <li class="feature-yes"><span class="icon">✓</span>Educación sobre entrenamiento</li>
+            <li class="feature-yes"><span class="icon">✓</span>Acceso a comunidad privada</li>
+            <li class="feature-yes"><span class="icon">✓</span>Seguimiento semanal de progreso</li>
+            <li class="feature-yes"><span class="icon">✓</span>Feedback personalizado del coach en 24 horas</li>
+            <li class="feature-yes"><span class="icon">✓</span>Revisión de videos técnicos</li>
+            <li class="feature-no"><span class="icon">✕</span>Llamada semanal con el entrenador</li>
+          </ul>
+          <a href="plataforma.html" class="btn-primary pricing-btn warp-link">Empezar con Coaching</a>
+        </div>
+
+        <div class="pricing-card reveal" style="transition-delay: 0.24s">
+          <h3 class="pricing-name">Vertical Empire Full</h3>
+          <p class="pricing-desc">La experiencia completa: máximo acompañamiento, contacto directo con tu coach y resultados más rápidos.</p>
+          <div class="pricing-price">
+            <span class="price-currency">$</span><span class="price-amount">89</span><span class="price-period">/mes USD</span>
+          </div>
+          <ul class="pricing-features">
+            <li class="feature-yes"><span class="icon">✓</span>Evaluación inicial Vertical Empire</li>
+            <li class="feature-yes"><span class="icon">✓</span>Plan de entrenamiento personalizado</li>
+            <li class="feature-yes"><span class="icon">✓</span>Acceso a la plataforma Vertical Empire</li>
+            <li class="feature-yes"><span class="icon">✓</span>Biblioteca de ejercicios educativa</li>
+            <li class="feature-yes"><span class="icon">✓</span>Educación sobre entrenamiento</li>
+            <li class="feature-yes"><span class="icon">✓</span>Acceso a comunidad privada</li>
+            <li class="feature-yes"><span class="icon">✓</span>Seguimiento semanal de progreso</li>
+            <li class="feature-yes"><span class="icon">✓</span>Feedback personalizado del coach en 24 horas</li>
+            <li class="feature-yes"><span class="icon">✓</span>Revisión de videos técnicos</li>
+            <li class="feature-yes"><span class="icon">✓</span>Llamada semanal con el entrenador</li>
+          </ul>
+          <a href="plataforma.html" class="btn-secondary pricing-btn warp-link">Empezar con Full</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="programas" class="programs">
+      <p class="programs-eyebrow reveal">PROGRAMAS</p>
+      <h2 class="programs-title reveal">Programas dentro de la plataforma</h2>
+
+      <div class="programs-grid">
+        <div class="program-card reveal" style="transition-delay: 0s">
+          <div class="program-image">
+            <img src="img/0a100Salto.png" alt="De 0 a 100 en Salto Vertical" class="program-photo">
+          </div>
+          <h3 class="program-title">De 0 a 100 en Salto Vertical</h3>
+          <p class="program-desc">Descripción breve del programa.</p>
+        </div>
+
+        <div class="program-card reveal" style="transition-delay: 0.08s">
+          <div class="program-image">
+            <img src="img/DolorDeRodillas.png" alt="Fuera Dolor de Rodillas y Tendinitis" class="program-photo photo-knee">
+          </div>
+          <h3 class="program-title">Fuera Dolor de Rodillas y Tendinitis</h3>
+          <p class="program-desc">Descripción breve del programa.</p>
+        </div>
+
+        <div class="program-card reveal" style="transition-delay: 0.16s">
+          <div class="program-image">
+            <img src="img/EstiramientoRecuperacion.png" alt="Estiramientos y Recuperación" class="program-photo photo-stretch">
+          </div>
+          <h3 class="program-title">Estiramientos y Recuperación</h3>
+          <p class="program-desc">Descripción breve del programa.</p>
+        </div>
+
+        <div class="program-card reveal" style="transition-delay: 0.24s">
+          <div class="program-image">
+            <img src="img/BiologiaAlimentacion.png" alt="Biología y Alimentación" class="program-photo photo-nutrition">
+          </div>
+          <h3 class="program-title">Biología y Alimentación</h3>
+          <p class="program-desc">Descripción breve del programa.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonios" class="testimonials">
+      <p class="testimonials-eyebrow reveal">TESTIMONIOS</p>
+      <h2 class="testimonials-title reveal">Lo que dicen nuestros atletas.</h2>
+
+      <div class="testimonials-videos">
+        <div class="video-placeholder vertical reveal" style="transition-delay: 0s">
+          <button class="play-btn" aria-label="Reproducir video">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="white">
+              <path d="M8 5v14l11-7z"></path>
+            </svg>
+          </button>
+          <p class="video-placeholder-text">Espacio reservado para tu video</p>
+        </div>
+
+        <div class="video-placeholder vertical reveal" style="transition-delay: 0.1s">
+          <button class="play-btn" aria-label="Reproducir video">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="white">
+              <path d="M8 5v14l11-7z"></path>
+            </svg>
+          </button>
+          <p class="video-placeholder-text">Espacio reservado para tu video</p>
+        </div>
+
+        <div class="video-placeholder vertical reveal" style="transition-delay: 0.2s">
+          <button class="play-btn" aria-label="Reproducir video">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="white">
+              <path d="M8 5v14l11-7z"></path>
+            </svg>
+          </button>
+          <p class="video-placeholder-text">Espacio reservado para tu video</p>
+        </div>
+      </div>
+
+      <div class="testimonials-grid"></div>
+    </section>
+
+    <section id="agenda" class="booking">
+      <p class="booking-eyebrow reveal">AGENDA TU LLAMADA</p>
+      <h2 class="booking-title reveal">Agenda tu llamada de evaluación.</h2>
+      <p class="booking-subtitle reveal">Llamadas de 15 a 20 minutos, disponibles Martes, Miércoles y Viernes de 9:00 a.m. a 2:00 p.m.</p>
+
+      <form class="booking-form reveal" id="bookingForm">
+        <div class="form-row three">
+          <div class="form-field">
+            <label for="fullName">Nombre completo</label>
+            <input type="text" id="fullName" name="fullName">
+          </div>
+          <div class="form-field">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email">
+          </div>
+          <div class="form-field">
+            <label for="phone">WhatsApp / Teléfono</label>
+            <div class="phone-input">
+              <select id="phoneCode" name="phoneCode">
+                <option value="+93">Afganistán (+93)</option>
+                <option value="+355">Albania (+355)</option>
+                <option value="+49">Alemania (+49)</option>
+                <option value="+376">Andorra (+376)</option>
+                <option value="+244">Angola (+244)</option>
+                <option value="+1">Antigua y Barbuda (+1)</option>
+                <option value="+966">Arabia Saudita (+966)</option>
+                <option value="+213">Argelia (+213)</option>
+                <option value="+54">Argentina (+54)</option>
+                <option value="+374">Armenia (+374)</option>
+                <option value="+61">Australia (+61)</option>
+                <option value="+43">Austria (+43)</option>
+                <option value="+994">Azerbaiyán (+994)</option>
+                <option value="+1">Bahamas (+1)</option>
+                <option value="+880">Bangladés (+880)</option>
+                <option value="+1">Barbados (+1)</option>
+                <option value="+973">Baréin (+973)</option>
+                <option value="+32">Bélgica (+32)</option>
+                <option value="+501">Belice (+501)</option>
+                <option value="+229">Benín (+229)</option>
+                <option value="+375">Bielorrusia (+375)</option>
+                <option value="+95">Birmania / Myanmar (+95)</option>
+                <option value="+591">Bolivia (+591)</option>
+                <option value="+387">Bosnia y Herzegovina (+387)</option>
+                <option value="+267">Botsuana (+267)</option>
+                <option value="+55">Brasil (+55)</option>
+                <option value="+673">Brunéi (+673)</option>
+                <option value="+359">Bulgaria (+359)</option>
+                <option value="+226">Burkina Faso (+226)</option>
+                <option value="+257">Burundi (+257)</option>
+                <option value="+975">Bután (+975)</option>
+                <option value="+238">Cabo Verde (+238)</option>
+                <option value="+855">Camboya (+855)</option>
+                <option value="+237">Camerún (+237)</option>
+                <option value="+1">Canadá (+1)</option>
+                <option value="+974">Catar (+974)</option>
+                <option value="+235">Chad (+235)</option>
+                <option value="+56">Chile (+56)</option>
+                <option value="+86">China (+86)</option>
+                <option value="+357">Chipre (+357)</option>
+                <option value="+379">Ciudad del Vaticano (+379)</option>
+                <option value="+57">Colombia (+57)</option>
+                <option value="+269">Comoras (+269)</option>
+                <option value="+850">Corea del Norte (+850)</option>
+                <option value="+82">Corea del Sur (+82)</option>
+                <option value="+225">Costa de Marfil (+225)</option>
+                <option value="+506">Costa Rica (+506)</option>
+                <option value="+385">Croacia (+385)</option>
+                <option value="+53">Cuba (+53)</option>
+                <option value="+45">Dinamarca (+45)</option>
+                <option value="+1">Dominica (+1)</option>
+                <option value="+593">Ecuador (+593)</option>
+                <option value="+20">Egipto (+20)</option>
+                <option value="+503">El Salvador (+503)</option>
+                <option value="+971">Emiratos Árabes Unidos (+971)</option>
+                <option value="+291">Eritrea (+291)</option>
+                <option value="+421">Eslovaquia (+421)</option>
+                <option value="+386">Eslovenia (+386)</option>
+                <option value="+34">España (+34)</option>
+                <option value="+1">Estados Unidos (+1)</option>
+                <option value="+372">Estonia (+372)</option>
+                <option value="+268">Esuatini (+268)</option>
+                <option value="+251">Etiopía (+251)</option>
+                <option value="+63">Filipinas (+63)</option>
+                <option value="+358">Finlandia (+358)</option>
+                <option value="+679">Fiyi (+679)</option>
+                <option value="+33">Francia (+33)</option>
+                <option value="+241">Gabón (+241)</option>
+                <option value="+220">Gambia (+220)</option>
+                <option value="+995">Georgia (+995)</option>
+                <option value="+233">Ghana (+233)</option>
+                <option value="+1">Granada (+1)</option>
+                <option value="+30">Grecia (+30)</option>
+                <option value="+502">Guatemala (+502)</option>
+                <option value="+224">Guinea (+224)</option>
+                <option value="+245">Guinea-Bisáu (+245)</option>
+                <option value="+240">Guinea Ecuatorial (+240)</option>
+                <option value="+592">Guyana (+592)</option>
+                <option value="+509">Haití (+509)</option>
+                <option value="+504">Honduras (+504)</option>
+                <option value="+36">Hungría (+36)</option>
+                <option value="+91">India (+91)</option>
+                <option value="+62">Indonesia (+62)</option>
+                <option value="+964">Irak (+964)</option>
+                <option value="+98">Irán (+98)</option>
+                <option value="+353">Irlanda (+353)</option>
+                <option value="+354">Islandia (+354)</option>
+                <option value="+692">Islas Marshall (+692)</option>
+                <option value="+677">Islas Salomón (+677)</option>
+                <option value="+972">Israel (+972)</option>
+                <option value="+39">Italia (+39)</option>
+                <option value="+1">Jamaica (+1)</option>
+                <option value="+81">Japón (+81)</option>
+                <option value="+962">Jordania (+962)</option>
+                <option value="+7">Kazajistán (+7)</option>
+                <option value="+254">Kenia (+254)</option>
+                <option value="+996">Kirguistán (+996)</option>
+                <option value="+686">Kiribati (+686)</option>
+                <option value="+383">Kosovo (+383)</option>
+                <option value="+965">Kuwait (+965)</option>
+                <option value="+856">Laos (+856)</option>
+                <option value="+266">Lesoto (+266)</option>
+                <option value="+371">Letonia (+371)</option>
+                <option value="+961">Líbano (+961)</option>
+                <option value="+231">Liberia (+231)</option>
+                <option value="+218">Libia (+218)</option>
+                <option value="+423">Liechtenstein (+423)</option>
+                <option value="+370">Lituania (+370)</option>
+                <option value="+352">Luxemburgo (+352)</option>
+                <option value="+389">Macedonia del Norte (+389)</option>
+                <option value="+261">Madagascar (+261)</option>
+                <option value="+60">Malasia (+60)</option>
+                <option value="+265">Malaui (+265)</option>
+                <option value="+960">Maldivas (+960)</option>
+                <option value="+223">Malí (+223)</option>
+                <option value="+356">Malta (+356)</option>
+                <option value="+212">Marruecos (+212)</option>
+                <option value="+230">Mauricio (+230)</option>
+                <option value="+222">Mauritania (+222)</option>
+                <option value="+52" selected>México (+52)</option>
+                <option value="+691">Micronesia (+691)</option>
+                <option value="+373">Moldavia (+373)</option>
+                <option value="+377">Mónaco (+377)</option>
+                <option value="+976">Mongolia (+976)</option>
+                <option value="+382">Montenegro (+382)</option>
+                <option value="+258">Mozambique (+258)</option>
+                <option value="+264">Namibia (+264)</option>
+                <option value="+674">Nauru (+674)</option>
+                <option value="+977">Nepal (+977)</option>
+                <option value="+505">Nicaragua (+505)</option>
+                <option value="+227">Níger (+227)</option>
+                <option value="+234">Nigeria (+234)</option>
+                <option value="+47">Noruega (+47)</option>
+                <option value="+64">Nueva Zelanda (+64)</option>
+                <option value="+968">Omán (+968)</option>
+                <option value="+31">Países Bajos (+31)</option>
+                <option value="+92">Pakistán (+92)</option>
+                <option value="+680">Palaos (+680)</option>
+                <option value="+507">Panamá (+507)</option>
+                <option value="+675">Papúa Nueva Guinea (+675)</option>
+                <option value="+595">Paraguay (+595)</option>
+                <option value="+51">Perú (+51)</option>
+                <option value="+48">Polonia (+48)</option>
+                <option value="+351">Portugal (+351)</option>
+                <option value="+44">Reino Unido (+44)</option>
+                <option value="+236">República Centroafricana (+236)</option>
+                <option value="+420">República Checa (+420)</option>
+                <option value="+242">República del Congo (+242)</option>
+                <option value="+243">República Democrática del Congo (+243)</option>
+                <option value="+1">República Dominicana (+1)</option>
+                <option value="+250">Ruanda (+250)</option>
+                <option value="+40">Rumania (+40)</option>
+                <option value="+7">Rusia (+7)</option>
+                <option value="+685">Samoa (+685)</option>
+                <option value="+1">San Cristóbal y Nieves (+1)</option>
+                <option value="+378">San Marino (+378)</option>
+                <option value="+1">San Vicente y las Granadinas (+1)</option>
+                <option value="+1">Santa Lucía (+1)</option>
+                <option value="+239">Santo Tomé y Príncipe (+239)</option>
+                <option value="+221">Senegal (+221)</option>
+                <option value="+381">Serbia (+381)</option>
+                <option value="+248">Seychelles (+248)</option>
+                <option value="+232">Sierra Leona (+232)</option>
+                <option value="+65">Singapur (+65)</option>
+                <option value="+963">Siria (+963)</option>
+                <option value="+252">Somalia (+252)</option>
+                <option value="+94">Sri Lanka (+94)</option>
+                <option value="+27">Sudáfrica (+27)</option>
+                <option value="+249">Sudán (+249)</option>
+                <option value="+211">Sudán del Sur (+211)</option>
+                <option value="+46">Suecia (+46)</option>
+                <option value="+41">Suiza (+41)</option>
+                <option value="+597">Surinam (+597)</option>
+                <option value="+66">Tailandia (+66)</option>
+                <option value="+886">Taiwán (+886)</option>
+                <option value="+255">Tanzania (+255)</option>
+                <option value="+992">Tayikistán (+992)</option>
+                <option value="+670">Timor Oriental (+670)</option>
+                <option value="+228">Togo (+228)</option>
+                <option value="+676">Tonga (+676)</option>
+                <option value="+1">Trinidad y Tobago (+1)</option>
+                <option value="+216">Túnez (+216)</option>
+                <option value="+993">Turkmenistán (+993)</option>
+                <option value="+90">Turquía (+90)</option>
+                <option value="+688">Tuvalu (+688)</option>
+                <option value="+380">Ucrania (+380)</option>
+                <option value="+256">Uganda (+256)</option>
+                <option value="+598">Uruguay (+598)</option>
+                <option value="+998">Uzbekistán (+998)</option>
+                <option value="+678">Vanuatu (+678)</option>
+                <option value="+58">Venezuela (+58)</option>
+                <option value="+84">Vietnam (+84)</option>
+                <option value="+967">Yemen (+967)</option>
+                <option value="+253">Yibuti (+253)</option>
+                <option value="+260">Zambia (+260)</option>
+                <option value="+263">Zimbabue (+263)</option>
+              </select>
+              <input type="tel" id="phone" name="phone" placeholder="10 dígitos">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row three">
+          <div class="form-field">
+            <label for="age">Edad</label>
+            <input type="number" id="age" name="age">
+          </div>
+          <div class="form-field">
+            <label for="height">Altura (cm)</label>
+            <input type="number" id="height" name="height">
+          </div>
+          <div class="form-field">
+            <label for="weight">Peso (kg)</label>
+            <input type="number" id="weight" name="weight">
+          </div>
+        </div>
+
+        <div class="form-field full">
+          <label for="sportExp">Experiencia deportiva</label>
+          <input type="text" id="sportExp" name="sportExp" placeholder="Deporte principal y años de experiencia">
+        </div>
+
+        <div class="form-field full">
+          <label for="goals">Objetivos personales</label>
+          <textarea id="goals" name="goals" placeholder="¿Qué quieres lograr con tu salto vertical?"></textarea>
+        </div>
+
+        <div class="form-field full">
+          <label for="trainingHistory">Historial de entrenamiento</label>
+          <textarea id="trainingHistory" name="trainingHistory" placeholder="¿Qué tipo de entrenamiento has hecho hasta ahora?"></textarea>
+        </div>
+
+        <div class="form-row two">
+          <div class="form-field">
+            <label for="kneePain">¿Dolor de rodilla o tendinitis?</label>
+            <select id="kneePain" name="kneePain">
+              <option value="">Selecciona una opción</option>
+              <option value="no">No, ninguno</option>
+              <option value="leve">Sí, leve</option>
+              <option value="moderado">Sí, moderado</option>
+              <option value="severo">Sí, severo</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="availability">Capacidad de entrenamiento disponible</label>
+            <select id="availability" name="availability">
+              <option value="">Días por semana</option>
+              <option value="1-2">1 - 2 días</option>
+              <option value="3-4">3 - 4 días</option>
+              <option value="5-6">5 - 6 días</option>
+              <option value="7">Todos los días</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field full">
+          <label for="injuries">Lesiones o molestias actuales</label>
+          <textarea id="injuries" name="injuries" placeholder="Describe cualquier lesión, molestia o detalle sobre el dolor de rodilla/tendinitis"></textarea>
+        </div>
+
+        <div class="form-field full">
+          <label for="recovery">Hábitos de recuperación y nutrición</label>
+          <textarea id="recovery" name="recovery" placeholder="Sueño, alimentación, estiramientos, suplementos, etc."></textarea>
+        </div>
+
+        <p class="booking-section-label">ELIGE DÍA Y HORA</p>
+
+        <div class="booking-calendar-wrap">
+          <div class="calendar">
+            <div class="calendar-header">
+              <button type="button" class="cal-nav" id="calPrev" aria-label="Mes anterior">‹</button>
+              <span id="calMonthLabel">Agosto 2026</span>
+              <button type="button" class="cal-nav" id="calNext" aria-label="Mes siguiente">›</button>
+            </div>
+            <div class="calendar-weekdays">
+              <span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span>
+            </div>
+            <div class="calendar-days" id="calDays"></div>
+            <p class="calendar-note">Solo disponible Martes, Miércoles y Viernes</p>
+          </div>
+
+          <div class="time-slots" id="timeSlots">
+            <p class="time-slots-heading" id="timeSlotsHeading"></p>
+            <p class="time-slots-placeholder">Selecciona un día para ver horarios</p>
+          </div>
+        </div>
+
+        <button type="button" class="btn-primary booking-submit" id="bookingSubmit" disabled>Selecciona día y hora para confirmar</button>
+      </form>
+    </section>
+
+    <section id="faq" class="faq">
+      <p class="faq-eyebrow reveal">PREGUNTAS FRECUENTES</p>
+      <h2 class="faq-title reveal">Resolvemos tus dudas.</h2>
+
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button type="button" class="faq-question">
+            <span>¿En qué consiste la evaluación inicial gratuita?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer-wrap">
+            <div class="faq-answer">
+              <p>Es una llamada de 15 a 20 minutos donde analizamos tus datos físicos, experiencia deportiva, objetivos, historial de entrenamiento, lesiones o molestias actuales y tu capacidad de entrenamiento disponible, para entender tu punto de partida y diseñar el plan más adecuado para ti.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button type="button" class="faq-question">
+            <span>¿Qué días y horarios hay disponibles para la llamada de evaluación?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer-wrap">
+            <div class="faq-answer">
+              <p>Las llamadas están disponibles Martes, Miércoles y Viernes de 9:00 a.m. a 2:00 p.m. Puedes elegir el día y horario que mejor te acomode directamente en el calendario de arriba.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button type="button" class="faq-question">
+            <span>Tengo dolor de rodilla o tendinitis, ¿puedo entrenar de todas formas?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer-wrap">
+            <div class="faq-answer">
+              <p>Sí. Parte de la metodología Vertical Empire está enfocada en prevenir y tratar problemas comunes como el dolor de rodilla y la tendinitis, así que cuéntanos tu situación en la evaluación para adaptar tu plan.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button type="button" class="faq-question">
+            <span>¿El plan se adapta a mi nivel actual?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer-wrap">
+            <div class="faq-answer">
+              <p>Sí. Tu plan se construye a partir de tu evaluación inicial y tu capacidad de entrenamiento disponible, así que se ajusta tanto si estás empezando desde cero como si ya tienes experiencia.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button type="button" class="faq-question">
+            <span>¿Cómo le doy seguimiento a mi progreso?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer-wrap">
+            <div class="faq-answer">
+              <p>Revisamos tu evolución semana a semana: cómo responde tu cuerpo, las dificultades que tengas y los ajustes necesarios en tu entrenamiento.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button type="button" class="faq-question">
+            <span>¿Necesito tener cierta edad para poder empezar?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer-wrap">
+            <div class="faq-answer">
+              <p>El programa está pensado para adolescentes y adultos que ya practican algún deporte. En el caso de menores de edad, recomendamos supervisión y respetar la progresión adecuada para su etapa de desarrollo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button type="button" class="faq-question">
+            <span>¿Se necesita algún equipamiento o acceso a gimnasio?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer-wrap">
+            <div class="faq-answer">
+              <p>No es obligatorio. Muchos ejercicios se pueden realizar con equipamiento básico o solo peso corporal, aunque tener acceso a un gimnasio puede ayudarte a acelerar tus resultados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-main">VERTICAL EMPIRE</span>
+          <span class="logo-sub">PERFORMANCE</span>
+        </div>
+
+        <div class="footer-socials">
+          <a href="#" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"></path>
+            </svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="2.5" y="2.5" width="19" height="19" rx="5"></rect>
+              <circle cx="12" cy="12" r="4.5"></circle>
+              <circle cx="17.5" cy="6.5" r="1"></circle>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M14 22v-8.4h2.8l.4-3.3H14V8.1c0-1 .3-1.6 1.7-1.6h1.7V3.5C17.1 3.4 16 3.3 14.8 3.3c-2.6 0-4.4 1.6-4.4 4.5v2.5H7.6v3.3h2.8V22h3.6Z"></path>
+            </svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M16.6 3c.3 2.2 1.6 3.6 3.9 3.8v2.9c-1.4.1-2.6-.3-3.9-1.1v6.7c0 4.2-4.6 6.9-8.3 4.8-2.4-1.3-3.3-4.4-2-6.9 1-1.9 3-3 5.1-2.8v3c-.4-.1-.9-.1-1.3 0-1 .3-1.6 1.3-1.5 2.3.2 1.9 2.9 2.5 4 .9.3-.5.4-1 .4-1.6V3h3.6Z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <p class="footer-col-title">Coaching</p>
+          <a href="#">Crear una cuenta</a>
+          <a href="#">Trabaja con Nosotros</a>
+          <a href="#">Entrar</a>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Grupo</p>
+          <a href="#">Términos y Condiciones</a>
+          <a href="#">Política de privacidad</a>
+          <a href="#">Nosotros</a>
+        </div>
+      </div>
+
+      <div class="footer-contact">
+        <a href="mailto:vertical.empire.performance@gmail.com">vertical.empire.performance@gmail.com</a>
+        <span>@CxrlosSxalas</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Vertical Empire Performance. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/stars.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/nav-auth.js"></script>
+  <script src="js/warp.js"></script>
+</body>
+</html>
