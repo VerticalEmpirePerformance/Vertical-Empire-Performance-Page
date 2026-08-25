@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=19">
   <link rel="stylesheet" href="css/account.css?v=3">
 </head>
 <body>
@@ -21,15 +21,20 @@
       <span class="logo-main">VERTICAL EMPIRE</span>
       <span class="logo-sub">PERFORMANCE</span>
     </a>
-    <a href="index.html" class="header-back-link warp-link">Volver al inicio</a>
+    <a href="membresias.html" class="header-back-link warp-link">Membresías</a>
     <nav class="nav">
-      <button type="button" class="nav-account" id="logoutBtn" aria-label="Cerrar sesión">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6">
-          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-          <path d="M16 17l5-5-5-5"></path>
-          <path d="M21 12H9"></path>
-        </svg>
-      </button>
+      <div class="nav-account-wrap">
+        <a href="cuenta.html" class="nav-account warp-link" id="navAccountLink" aria-label="Cuenta">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path>
+          </svg>
+        </a>
+        <div class="nav-account-menu" id="navAccountMenu">
+          <a href="membresias.html" class="nav-account-menu-item warp-link">Cursos</a>
+          <button type="button" class="nav-account-menu-item" id="navLogoutBtn">Cerrar sesión</button>
+        </div>
+      </div>
     </nav>
   </header>
   <div class="header-spacer"></div>
@@ -74,46 +79,55 @@
       <h2 class="programs-title reveal">Contenido de entrenamiento.</h2>
 
       <div class="programs-grid">
-        <div class="program-card reveal" style="transition-delay: 0s">
+        <a href="curso-0a100.html" class="program-card warp-link reveal" style="transition-delay: 0s">
           <div class="program-image">
             <img src="img/0a100Salto.png" alt="De 0 a 100 en Salto Vertical" class="program-photo">
           </div>
           <h3 class="program-title">De 0 a 100 en Salto Vertical</h3>
           <p class="program-desc">Descripción breve del programa.</p>
-        </div>
+        </a>
 
-        <div class="program-card reveal" style="transition-delay: 0.08s">
+        <a href="curso-rodillas.html" class="program-card warp-link reveal" style="transition-delay: 0.08s">
           <div class="program-image">
             <img src="img/DolorDeRodillas.png" alt="Fuera Dolor de Rodillas y Tendinitis" class="program-photo photo-knee">
           </div>
           <h3 class="program-title">Fuera Dolor de Rodillas y Tendinitis</h3>
           <p class="program-desc">Descripción breve del programa.</p>
-        </div>
+        </a>
 
-        <div class="program-card reveal" style="transition-delay: 0.16s">
+        <a href="curso-estiramientos.html" class="program-card warp-link reveal" style="transition-delay: 0.16s">
           <div class="program-image">
             <img src="img/EstiramientoRecuperacion.png" alt="Estiramientos y Recuperación" class="program-photo photo-stretch">
           </div>
           <h3 class="program-title">Estiramientos y Recuperación</h3>
           <p class="program-desc">Descripción breve del programa.</p>
-        </div>
+        </a>
 
-        <div class="program-card reveal" style="transition-delay: 0.24s">
+        <a href="curso-biologia.html" class="program-card warp-link reveal" style="transition-delay: 0.24s">
           <div class="program-image">
             <img src="img/BiologiaAlimentacion.png" alt="Biología y Alimentación" class="program-photo photo-nutrition">
           </div>
           <h3 class="program-title">Biología y Alimentación</h3>
           <p class="program-desc">Descripción breve del programa.</p>
-        </div>
+        </a>
+
+        <a href="curso-libreria.html" class="program-card warp-link reveal" style="transition-delay: 0.32s">
+          <div class="program-image">
+            <img src="img/SentadillaBulgara.png" alt="Librería de Ejercicios" class="program-photo photo-library">
+          </div>
+          <h3 class="program-title">Librería de Ejercicios</h3>
+          <p class="program-desc">Descripción breve del programa.</p>
+        </a>
       </div>
     </section>
   </main>
 
-  <script src="js/stars.js"></script>
+  <script src="js/stars.js?v=1"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/supabase-config.js"></script>
-  <script src="js/dashboard.js"></script>
-  <script src="js/reveal.js"></script>
-  <script src="js/warp.js"></script>
+  <script src="js/supabase-config.js?v=1"></script>
+  <script src="js/nav-auth.js?v=1"></script>
+  <script src="js/dashboard.js?v=1"></script>
+  <script src="js/reveal.js?v=1"></script>
+  <script src="js/warp.js?v=1"></script>
 </body>
 </html>

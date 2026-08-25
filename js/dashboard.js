@@ -16,15 +16,33 @@ function initDashboard() {
     }
 
     var user = session.user;
+    var justCheckedOut = new URLSearchParams(window.location.search).get('checkout') === 'success';
 
-    supabaseClient.from('profiles').select('*').eq('id', user.id).single().then(function (profileResult) {
-      var profile = profileResult.data || {};
+    loadProfile(user, justCheckedOut ? 5 : 0);
 
-      if (profile.role && profile.role !== 'user') {
-        window.location.href = 'cuenta.html';
-        return;
-      }
+    function loadProfile(user, retriesLeft) {
+      supabaseClient.from('profiles').select('*').eq('id', user.id).single().then(function (profileResult) {
+        var profile = profileResult.data || {};
 
+        if (profile.role && profile.role !== 'user') {
+          window.location.href = 'cuenta.html';
+          return;
+        }
+
+        if (!profile.membership) {
+          if (retriesLeft > 0) {
+            setTimeout(function () { loadProfile(user, retriesLeft - 1); }, 1000);
+            return;
+          }
+          window.location.href = 'membresias.html';
+          return;
+        }
+
+        renderProfile(user, profile);
+      });
+    }
+
+    function renderProfile(user, profile) {
       var fullName = profile.full_name || user.email;
 
       document.getElementById('dashboardTitle').textContent = 'Bienvenido, ' + fullName + '.';
@@ -38,7 +56,7 @@ function initDashboard() {
       var phoneCode = profile.phone_code || '';
       var phone = profile.phone || '';
       document.getElementById('infoPhone').textContent = (phoneCode || phone) ? (phoneCode + ' ' + phone).trim() : '—';
-    });
+    }
   });
 
   if (logoutBtn) {

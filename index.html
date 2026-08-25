@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=19">
 </head>
 <body>
 
@@ -29,7 +29,7 @@
           </svg>
         </a>
         <div class="nav-account-menu" id="navAccountMenu">
-          <a href="plataforma.html" class="nav-account-menu-item warp-link">Cursos</a>
+          <a href="membresias.html" class="nav-account-menu-item warp-link">Cursos</a>
           <button type="button" class="nav-account-menu-item" id="navLogoutBtn">Cerrar sesión</button>
         </div>
       </div>
@@ -188,6 +188,7 @@
         acompañamiento.
       </h2>
 
+      <p class="checkout-message" id="checkoutMessage"></p>
       <div class="pricing-grid">
         <div class="pricing-card reveal" style="transition-delay: 0s">
           <h3 class="pricing-name">Vertical Empire Basic</h3>
@@ -207,7 +208,7 @@
             <li class="feature-no"><span class="icon">✕</span>Revisión de videos técnicos</li>
             <li class="feature-no"><span class="icon">✕</span>Llamada semanal con el entrenador</li>
           </ul>
-          <a href="plataforma.html" class="btn-secondary pricing-btn warp-link">Empezar con Basic</a>
+          <button type="button" class="btn-secondary pricing-btn checkout-btn" data-tier="basic">Empezar con Basic</button>
         </div>
 
         <div class="pricing-card featured reveal" style="transition-delay: 0.12s">
@@ -229,7 +230,7 @@
             <li class="feature-yes"><span class="icon">✓</span>Revisión de videos técnicos</li>
             <li class="feature-no"><span class="icon">✕</span>Llamada semanal con el entrenador</li>
           </ul>
-          <a href="plataforma.html" class="btn-primary pricing-btn warp-link">Empezar con Coaching</a>
+          <button type="button" class="btn-primary pricing-btn checkout-btn" data-tier="coaching">Empezar con Coaching</button>
         </div>
 
         <div class="pricing-card reveal" style="transition-delay: 0.24s">
@@ -250,7 +251,7 @@
             <li class="feature-yes"><span class="icon">✓</span>Revisión de videos técnicos</li>
             <li class="feature-yes"><span class="icon">✓</span>Llamada semanal con el entrenador</li>
           </ul>
-          <a href="plataforma.html" class="btn-secondary pricing-btn warp-link">Empezar con Full</a>
+          <button type="button" class="btn-secondary pricing-btn checkout-btn" data-tier="full">Empezar con Full</button>
         </div>
       </div>
     </section>
@@ -793,13 +794,15 @@
     </div>
   </footer>
 
-  <script src="js/stars.js"></script>
-  <script src="js/booking.js"></script>
-  <script src="js/faq.js"></script>
-  <script src="js/reveal.js"></script>
+  <script src="js/stars.js?v=1"></script>
+  <script src="js/booking.js?v=1"></script>
+  <script src="js/faq.js?v=1"></script>
+  <script src="js/reveal.js?v=1"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/supabase-config.js"></script>
-  <script src="js/nav-auth.js"></script>
-  <script src="js/warp.js"></script>
+  <script src="js/supabase-config.js?v=1"></script>
+  <script src="js/stripe-config.js?v=2"></script>
+  <script src="js/nav-auth.js?v=1"></script>
+  <script src="js/checkout.js?v=5"></script>
+  <script src="js/warp.js?v=1"></script>
 </body>
 </html>

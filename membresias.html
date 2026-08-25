@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=19">
   <link rel="stylesheet" href="css/account.css?v=3">
 </head>
 <body>
@@ -21,14 +21,20 @@
       <span class="logo-main">VERTICAL EMPIRE</span>
       <span class="logo-sub">PERFORMANCE</span>
     </a>
+    <a href="index.html" class="header-back-link warp-link">Volver al inicio</a>
     <nav class="nav">
-      <button type="button" class="nav-account" id="logoutBtn" aria-label="Cerrar sesión">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6">
-          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-          <path d="M16 17l5-5-5-5"></path>
-          <path d="M21 12H9"></path>
-        </svg>
-      </button>
+      <div class="nav-account-wrap">
+        <a href="cuenta.html" class="nav-account warp-link" id="navAccountLink" aria-label="Cuenta">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path>
+          </svg>
+        </a>
+        <div class="nav-account-menu" id="navAccountMenu">
+          <a href="membresias.html" class="nav-account-menu-item warp-link">Cursos</a>
+          <button type="button" class="nav-account-menu-item" id="navLogoutBtn">Cerrar sesión</button>
+        </div>
+      </div>
     </nav>
   </header>
   <div class="header-spacer"></div>
@@ -41,33 +47,38 @@
     </section>
 
     <section id="precios" class="pricing">
+      <p class="checkout-message" id="checkoutMessage"></p>
       <div class="pricing-grid">
         <div class="pricing-card featured reveal" style="transition-delay: 0s">
           <h3 class="pricing-name">Vertical Empire Basic</h3>
           <p class="pricing-desc">La metodología Vertical Empire para desarrollar tu máximo salto vertical.</p>
-          <a href="plataforma.html" class="btn-primary pricing-btn warp-link">Entrar ahora</a>
+          <button type="button" class="btn-primary pricing-btn checkout-btn" data-tier="basic">Entrar ahora</button>
         </div>
 
         <div class="pricing-card featured reveal" style="transition-delay: 0.12s">
           <h3 class="pricing-name">Vertical Empire Coaching</h3>
           <p class="pricing-desc">Guía más cercana, con mayor interacción y apoyo para resolver problemas específicos.</p>
-          <a href="plataforma.html" class="btn-primary pricing-btn warp-link">Entrar ahora</a>
+          <button type="button" class="btn-primary pricing-btn checkout-btn" data-tier="coaching">Entrar ahora</button>
         </div>
 
         <div class="pricing-card featured reveal" style="transition-delay: 0.24s">
           <h3 class="pricing-name">Vertical Empire Full</h3>
-          <p class="pricing-desc">La experiencia completa: máximo acompañamiento, contacto directo con tu coach y resultados más rápidos.</p>
-          <a href="plataforma.html" class="btn-primary pricing-btn warp-link">Entrar ahora</a>
+          <p class="pricing-desc">La experiencia completa: máximo acompañamiento, contacto directo con tu coach</p>
+          <button type="button" class="btn-primary pricing-btn checkout-btn" data-tier="full">Entrar ahora</button>
         </div>
       </div>
     </section>
   </main>
 
-  <script src="js/stars.js"></script>
+  <script src="js/stars.js?v=1"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/supabase-config.js"></script>
-  <script src="js/membership.js"></script>
-  <script src="js/reveal.js"></script>
-  <script src="js/warp.js"></script>
+  <script src="js/supabase-config.js?v=1"></script>
+  <script src="js/stripe-config.js?v=2"></script>
+  <script src="js/nav-auth.js?v=1"></script>
+  <script src="js/membership.js?v=2"></script>
+  <script>window.LOCK_UNOWNED_TIERS = true;</script>
+  <script src="js/checkout.js?v=5"></script>
+  <script src="js/reveal.js?v=1"></script>
+  <script src="js/warp.js?v=1"></script>
 </body>
 </html>

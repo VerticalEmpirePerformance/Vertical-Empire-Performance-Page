@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Empire Performance — Estiramientos y Recuperación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=19">
+  <link rel="stylesheet" href="css/account.css?v=3">
+</head>
+<body>
+
+  <canvas id="stars"></canvas>
+  <div class="nebula-glow glow-1"></div>
+  <div class="nebula-glow glow-2"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo warp-link">
+      <span class="logo-main">VERTICAL EMPIRE</span>
+      <span class="logo-sub">PERFORMANCE</span>
+    </a>
+    <a href="plataforma.html" class="header-back-link warp-link">Volver a la plataforma</a>
+    <nav class="nav">
+      <div class="nav-account-wrap">
+        <a href="cuenta.html" class="nav-account warp-link" id="navAccountLink" aria-label="Cuenta">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path>
+          </svg>
+        </a>
+        <div class="nav-account-menu" id="navAccountMenu">
+          <a href="membresias.html" class="nav-account-menu-item warp-link">Cursos</a>
+          <button type="button" class="nav-account-menu-item" id="navLogoutBtn">Cerrar sesión</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="header-spacer"></div>
+
+  <main>
+    <section id="curso-video" class="about">
+      <p class="about-eyebrow reveal" id="cursoEyebrow">TU CURSO</p>
+      <h2 class="about-title reveal" id="cursoTitle">Cargando curso...</h2>
+
+      <div class="video-placeholder reveal">
+        <button class="play-btn" aria-label="Reproducir video">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="white">
+            <path d="M8 5v14l11-7z"></path>
+          </svg>
+        </button>
+        <p class="video-placeholder-text">Espacio reservado para tu video</p>
+      </div>
+    </section>
+
+    <section id="curso-modulos" class="curso-modules">
+      <p class="programs-eyebrow reveal">MÓDULOS DEL CURSO</p>
+      <div class="module-grid" id="moduleGrid"></div>
+    </section>
+  </main>
+
+  <script>window.COURSE_ID = 'estiramientos';</script>
+  <script src="js/stars.js?v=1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js?v=1"></script>
+  <script src="js/nav-auth.js?v=1"></script>
+  <script src="js/course.js?v=1"></script>
+  <script src="js/reveal.js?v=1"></script>
+  <script src="js/warp.js?v=1"></script>
+</body>
+</html>
