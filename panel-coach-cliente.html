@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Empire Performance — Cliente</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=24">
+  <link rel="stylesheet" href="css/account.css?v=41">
+</head>
+<body>
+
+  <canvas id="stars"></canvas>
+  <div class="nebula-glow glow-1"></div>
+  <div class="nebula-glow glow-2"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo warp-link">
+      <span class="logo-main">VERTICAL EMPIRE</span>
+      <span class="logo-sub">PERFORMANCE</span>
+    </a>
+    <a href="panel-coach.html" class="header-back-link warp-link">Panel de coach</a>
+    <nav class="nav">
+      <div class="nav-account-wrap">
+        <a href="#" class="nav-account warp-link" id="navAccountLink" aria-label="Cuenta">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path>
+          </svg>
+        </a>
+        <div class="nav-account-menu" id="navAccountMenu">
+          <button type="button" class="nav-account-menu-item" id="navLogoutBtn">Cerrar sesión</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="header-spacer"></div>
+
+  <main class="dashboard-main">
+    <section class="dashboard-hero">
+      <p class="dashboard-eyebrow reveal">FICHA DE CLIENTE</p>
+      <h1 class="dashboard-title reveal" id="clientTitle">Cliente.</h1>
+
+      <div class="dashboard-info-card reveal">
+        <div class="info-item">
+          <span class="info-label">NOMBRE</span>
+          <span class="info-value" id="infoName">—</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">CORREO</span>
+          <span class="info-value" id="infoEmail">—</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">TELÉFONO</span>
+          <span class="info-value" id="infoPhone">—</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">PAÍS</span>
+          <span class="info-value" id="infoCountry">—</span>
+        </div>
+      </div>
+
+      <div class="dashboard-schedule-row">
+        <div class="dashboard-routine-card reveal">
+          <h3>Rutina generada</h3>
+          <div class="dashboard-subcard dashboard-subcard-large dashboard-subcard-spaced" id="generatedRoutineBox">
+            <p class="coach-client-placeholder">Este cliente aún no ha generado una rutina.</p>
+          </div>
+        </div>
+
+        <div class="dashboard-routine-card reveal" id="coachRoutineCard">
+          <h3>Rutina asignada por coach</h3>
+          <div class="dashboard-subcard-stack">
+            <textarea class="dashboard-subcard dashboard-subcard-large dashboard-subcard-textarea" id="coachRoutineText" placeholder="Escribe aquí la rutina para este cliente..."></textarea>
+            <button type="button" class="btn-primary dashboard-generate-btn" id="saveCoachRoutineBtn">Guardar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-routine-card dashboard-routine-card-compact reveal">
+        <h3>Consejos y recomendaciones</h3>
+        <div class="dashboard-subcard-stack">
+          <textarea class="dashboard-subcard dashboard-subcard-spaced dashboard-subcard-textarea" id="coachTipsText" placeholder="Escribe aquí consejos y recomendaciones para este cliente..."></textarea>
+          <button type="button" class="btn-primary dashboard-generate-btn" id="saveCoachTipsBtn">Guardar</button>
+        </div>
+      </div>
+
+      <div class="dashboard-schedule-card dashboard-schedule-card-compact reveal" id="callCoachBox">
+        <p class="dashboard-feedback-text" id="callInfoText">Sin llamada agendada.</p>
+        <div class="call-status-buttons" id="callStatusButtons">
+          <button type="button" class="call-status-btn call-status-purple" data-status="pending" aria-label="Aún no se ha tomado"></button>
+          <button type="button" class="call-status-btn call-status-green" data-status="completed" aria-label="Se tomó"></button>
+          <button type="button" class="call-status-btn call-status-red" data-status="missed" aria-label="No se tomó, con retraso"></button>
+        </div>
+      </div>
+
+      <div class="dashboard-schedule-card dashboard-schedule-card-compact reveal" id="feedbackCoachBox">
+        <p class="dashboard-feedback-text" id="feedbackInfoText">No ha sido solicitada.</p>
+        <div class="call-status-buttons" id="feedbackStatusButtons">
+          <button type="button" class="call-status-btn call-status-purple" data-status="pending" aria-label="Aún no atendida"></button>
+          <button type="button" class="call-status-btn call-status-green" data-status="completed" aria-label="Retroalimentación dada"></button>
+          <button type="button" class="call-status-btn call-status-red" data-status="missed" aria-label="Con retraso"></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/stars.js?v=1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js?v=1"></script>
+  <script>window.NAV_SHOW_FULL_NAME = true;</script>
+  <script src="js/nav-auth.js?v=2"></script>
+  <script src="js/coach-client.js?v=9"></script>
+  <script src="js/reveal.js?v=1"></script>
+  <script src="js/warp.js?v=1"></script>
+  <script src="js/coach-nav-guard.js?v=1"></script>
+</body>
+</html>

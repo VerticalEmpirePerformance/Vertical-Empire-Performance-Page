@@ -56,6 +56,50 @@ function initDashboard() {
       var phoneCode = profile.phone_code || '';
       var phone = profile.phone || '';
       document.getElementById('infoPhone').textContent = (phoneCode || phone) ? (phoneCode + ' ' + phone).trim() : '—';
+
+      var fullCallSchedule = document.getElementById('fullCallSchedule');
+      var fullCallExtra = document.getElementById('fullCallExtra');
+      if (profile.membership !== 'full') {
+        if (fullCallSchedule) fullCallSchedule.style.display = 'none';
+        if (fullCallExtra) fullCallExtra.style.display = 'none';
+      }
+
+      var coachRoutineDisplay = document.getElementById('coachRoutineDisplay');
+      if (coachRoutineDisplay) {
+        if (profile.coach_routine) {
+          coachRoutineDisplay.textContent = profile.coach_routine;
+        } else {
+          coachRoutineDisplay.innerHTML = '<p class="dashboard-subcard-placeholder">Tu coach todavía no te ha asignado una rutina.</p>';
+        }
+      }
+
+      var coachTipsDisplay = document.getElementById('coachTipsDisplay');
+      if (coachTipsDisplay) {
+        if (profile.coach_tips) {
+          coachTipsDisplay.textContent = profile.coach_tips;
+        } else {
+          coachTipsDisplay.innerHTML = '<p class="dashboard-subcard-placeholder">Tu coach todavía no te ha dejado consejos.</p>';
+        }
+      }
+
+      var requestFeedbackBtn = document.getElementById('requestFeedbackBtn');
+      if (requestFeedbackBtn) {
+        requestFeedbackBtn.addEventListener('click', function () {
+          requestFeedbackBtn.disabled = true;
+          requestFeedbackBtn.textContent = 'Solicitando...';
+
+          supabaseClient.from('profiles').update({
+            feedback_requested_at: new Date().toISOString(),
+            feedback_status: 'pending'
+          }).eq('id', user.id).then(function (updateResult) {
+            requestFeedbackBtn.disabled = false;
+            requestFeedbackBtn.textContent = updateResult.error ? 'Error, intenta de nuevo' : 'Solicitada';
+            setTimeout(function () {
+              requestFeedbackBtn.textContent = 'Solicitar';
+            }, 1500);
+          });
+        });
+      }
     }
   });
 

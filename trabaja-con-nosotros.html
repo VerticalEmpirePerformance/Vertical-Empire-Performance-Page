@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Empire Performance — Trabaja con Nosotros</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=24">
+  <link rel="stylesheet" href="css/account.css?v=36">
+</head>
+<body>
+
+  <canvas id="stars"></canvas>
+  <div class="nebula-glow glow-1"></div>
+  <div class="nebula-glow glow-2"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo warp-link">
+      <span class="logo-main">VERTICAL EMPIRE</span>
+      <span class="logo-sub">PERFORMANCE</span>
+    </a>
+    <a href="index.html" class="header-back-link warp-link">Volver al inicio</a>
+    <nav class="nav">
+      <div class="nav-account-wrap">
+        <a href="cuenta.html" class="nav-account warp-link" id="navAccountLink" aria-label="Cuenta">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path>
+          </svg>
+        </a>
+        <div class="nav-account-menu" id="navAccountMenu">
+          <a href="membresias.html" class="nav-account-menu-item warp-link">Cursos</a>
+          <button type="button" class="nav-account-menu-item" id="navLogoutBtn">Cerrar sesión</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="header-spacer"></div>
+
+  <main class="membership-main">
+    <section class="membership-hero">
+      <p class="membership-eyebrow reveal">TRABAJA CON NOSOTROS</p>
+      <h1 class="membership-title reveal">Únete al equipo de coaches.</h1>
+      <p class="membership-subtitle reveal">Aplica para ser coach de Vertical Empire o entra a tu cuenta si ya formas parte del equipo.</p>
+    </section>
+
+    <section id="coach-options" class="pricing coach-options">
+      <div class="pricing-grid coach-options-grid">
+        <a href="aplicacion-coach.html" class="pricing-card featured coach-option-card warp-link reveal" style="transition-delay: 0s">
+          <h3 class="pricing-name">Formulario de aplicación</h3>
+          <p class="pricing-desc">¿Quieres ser coach de Vertical Empire? Cuéntanos sobre ti y tu experiencia.</p>
+          <svg class="coach-option-icon" viewBox="0 0 100 60" width="150" height="90" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="6" cy="54" r="2.5" fill="rgba(155,77,255,0.6)"></circle>
+            <path d="M6 54 C 24 54, 42 46, 66.25 35.95" stroke="rgba(155,77,255,0.6)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 7"></path>
+            <g transform="translate(54,6) rotate(18) scale(1.9)">
+              <polygon points="22 2 15 22 11 13 2 9 22 2" fill="#f4f3ff"></polygon>
+              <polygon points="22 2 15 22 11 13" fill="rgba(120,90,220,0.4)"></polygon>
+              <line x1="22" y1="2" x2="11" y2="13" stroke="rgba(20,10,50,0.55)" stroke-width="0.9" stroke-linecap="round"></line>
+              <line x1="2" y1="9" x2="11" y2="13" stroke="rgba(20,10,50,0.3)" stroke-width="0.7" stroke-linecap="round"></line>
+            </g>
+          </svg>
+        </a>
+
+        <a href="entrenador.html" class="pricing-card featured coach-option-card warp-link reveal" style="transition-delay: 0.12s">
+          <h3 class="pricing-name">Entrar a cuenta de coach</h3>
+          <p class="pricing-desc">Ya formas parte del equipo. Accede a tu panel de coach.</p>
+          <svg class="coach-option-icon" viewBox="0 0 100 60" width="150" height="90" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="20" r="10" fill="#f4f3ff"></circle>
+            <path d="M28 52 C28 34, 72 34, 72 52 Z" fill="#f4f3ff"></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/stars.js?v=1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js?v=1"></script>
+  <script src="js/nav-auth.js?v=2"></script>
+  <script src="js/reveal.js?v=1"></script>
+  <script src="js/warp.js?v=1"></script>
+</body>
+</html>

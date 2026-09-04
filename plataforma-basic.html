@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css?v=22">
-  <link rel="stylesheet" href="css/account.css?v=41">
+  <link rel="stylesheet" href="css/account.css?v=40">
 </head>
 <body>
 
@@ -107,46 +107,17 @@
             <button type="button" class="btn-primary dashboard-generate-btn" id="generateRoutineBtn">Generar</button>
           </div>
         </div>
-
-        <div class="dashboard-routine-card reveal">
-          <h3>Rutina asignada por coach</h3>
-          <div class="dashboard-subcard dashboard-subcard-large dashboard-subcard-spaced" id="coachRoutineDisplay"></div>
-        </div>
       </div>
 
       <div class="dashboard-routine-card dashboard-routine-card-compact reveal">
         <h3>Consejos y recomendaciones</h3>
         <div class="dashboard-subcard dashboard-subcard-spaced" id="coachTipsDisplay"></div>
       </div>
-
-      <div class="dashboard-schedule-card reveal" id="fullCallSchedule">
-        <h3 class="dashboard-schedule-main-title">Revisión semanal con llamada</h3>
-        <div class="dashboard-schedule-columns">
-          <div class="dashboard-schedule-column">
-            <h3>Elige el día</h3>
-            <div class="calendar" id="dayCalendar"></div>
-          </div>
-
-          <div class="dashboard-schedule-column">
-            <h3>Elige la hora</h3>
-            <div class="time-slots" id="timeSlots">
-              <p class="time-slots-hint">Primero selecciona un día.</p>
-            </div>
-          </div>
-        </div>
-
-        <button type="button" class="btn-primary dashboard-schedule-btn" id="scheduleCallBtn">Agendar</button>
-      </div>
-
-      <div class="dashboard-schedule-card dashboard-schedule-card-compact reveal" id="fullCallExtra">
-        <p class="dashboard-feedback-text">Solicitar retroalimentación (Margen de 24hrs)</p>
-        <button type="button" class="btn-primary dashboard-feedback-btn" id="requestFeedbackBtn">Solicitar</button>
-      </div>
     </section>
 
     <section id="modulos" class="programs">
       <p class="programs-eyebrow reveal">TUS MÓDULOS</p>
-      <h2 class="programs-title reveal">Contenido de entrenamiento.</h2>
+      <h2 class="programs-title reveal">Contenido de entrenamiento</h2>
 
       <div class="programs-grid programs-grid-centered">
         <a href="curso-0a100.html" class="program-card warp-link reveal" style="transition-delay: 0s">
@@ -197,7 +168,7 @@
   <script src="js/supabase-config.js?v=1"></script>
   <script src="js/nav-auth.js?v=2"></script>
   <script src="js/dashboard.js?v=6"></script>
-  <script src="js/schedule-calendar.js?v=11"></script>
+  <script src="js/schedule-calendar.js?v=10"></script>
   <script src="js/reveal.js?v=1"></script>
   <script src="js/warp.js?v=1"></script>
 </body>

@@ -32,30 +32,30 @@ function initAccount() {
   var loginSubmit = document.getElementById('loginSubmit');
   var signupSubmit = document.getElementById('signupSubmit');
 
-  if (!tabLogin) return;
+  if (!loginForm) return;
 
   function showLogin() {
-    tabLogin.classList.add('active');
-    tabSignup.classList.remove('active');
+    if (tabLogin) tabLogin.classList.add('active');
+    if (tabSignup) tabSignup.classList.remove('active');
     loginForm.classList.remove('hidden');
-    signupForm.classList.add('hidden');
+    if (signupForm) signupForm.classList.add('hidden');
     clearMessage(loginMessage);
-    clearMessage(signupMessage);
+    if (signupMessage) clearMessage(signupMessage);
   }
 
   function showSignup() {
-    tabSignup.classList.add('active');
-    tabLogin.classList.remove('active');
-    signupForm.classList.remove('hidden');
+    if (tabSignup) tabSignup.classList.add('active');
+    if (tabLogin) tabLogin.classList.remove('active');
+    if (signupForm) signupForm.classList.remove('hidden');
     loginForm.classList.add('hidden');
     clearMessage(loginMessage);
-    clearMessage(signupMessage);
+    if (signupMessage) clearMessage(signupMessage);
   }
 
-  tabLogin.addEventListener('click', showLogin);
-  tabSignup.addEventListener('click', showSignup);
-  goSignup.addEventListener('click', showSignup);
-  goLogin.addEventListener('click', showLogin);
+  if (tabLogin) tabLogin.addEventListener('click', showLogin);
+  if (tabSignup) tabSignup.addEventListener('click', showSignup);
+  if (goSignup) goSignup.addEventListener('click', showSignup);
+  if (goLogin) goLogin.addEventListener('click', showLogin);
 
   loginForm.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -125,7 +125,7 @@ function initAccount() {
       });
   });
 
-  signupForm.addEventListener('submit', function (e) {
+  if (signupForm) signupForm.addEventListener('submit', function (e) {
     e.preventDefault();
     clearMessage(signupMessage);
 

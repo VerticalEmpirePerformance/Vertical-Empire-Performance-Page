@@ -286,6 +286,17 @@ body {
   color: #fff;
 }
 
+.nav-account.nav-account-name {
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 13.5px;
+  white-space: nowrap;
+}
+
 .nav-account-wrap {
   position: relative;
 }
@@ -957,6 +968,14 @@ body {
   gap: 24px;
 }
 
+.programs-grid.programs-grid-centered {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .program-card {
   display: flex;
   flex-direction: column;
@@ -964,6 +983,10 @@ body {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+}
+
+.programs-grid-centered .program-card {
+  flex: 0 1 284px;
 }
 
 .program-image {
@@ -1231,6 +1254,17 @@ body {
   min-height: 0;
 }
 
+.video-embed {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 9 / 16;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(155, 77, 255, 0.25);
+  box-shadow: 0 20px 60px rgba(77, 40, 160, 0.25);
+}
+
 .testimonials-grid {
   display: flex;
   gap: 28px;
@@ -1410,6 +1444,31 @@ body {
   background-position: right 12px center;
   background-size: 16px;
   padding-right: 36px;
+}
+
+.days-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.day-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(155, 77, 255, 0.25);
+  background: rgba(5, 4, 15, 0.5);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.day-checkbox input {
+  cursor: pointer;
+  accent-color: var(--accent-purple);
 }
 
 .phone-input {
@@ -1930,6 +1989,10 @@ body {
 
   .programs-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .programs-grid-centered .program-card {
+    flex-basis: calc(50% - 12px);
   }
 
   .testimonials {
